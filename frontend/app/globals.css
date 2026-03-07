@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  background: #FDF2F4;
+}
+
+@layer utilities {
+  .duo-shadow {
+    box-shadow: 0 4px 0 0 #C97B95, 0 6px 10px rgba(0, 0, 0, 0.08);
+  }
+  .duo-shadow-green {
+    box-shadow: 0 4px 0 0 #C97B95, 0 6px 10px rgba(0, 0, 0, 0.08);
+  }
+}

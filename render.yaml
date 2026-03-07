@@ -1,0 +1,12 @@
+# Render Blueprint - Wedding RSVP
+# https://docs.render.com/blueprint-spec
+services:
+  - type: web
+    name: wedding-rsvp
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
