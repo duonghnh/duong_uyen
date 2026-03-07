@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "buildyarn": "next build",
     "start": "next start"
   },
   "dependencies": {
