@@ -1,4 +1,4 @@
-# Render Blueprint - Wedding RSVP
+# Render Blueprint - Wedding RSVP (Frontend + Backend API)
 # https://docs.render.com/blueprint-spec
 services:
   - type: web
@@ -9,4 +9,16 @@ services:
     startCommand: npm start
     envVars:
       - key: NODE_VERSION
-        value: 20
+        value: "20"
+      # Sau khi deploy xong, thêm NEXT_PUBLIC_API_URL = URL của service wedding-rsvp-api (ví dụ https://wedding-rsvp-api.onrender.com)
+
+  - type: web
+    name: wedding-rsvp-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      # Thêm FRONTEND_URL = URL của service wedding-rsvp (ví dụ https://wedding-rsvp.onrender.com)

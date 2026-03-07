@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import confetti from 'canvas-confetti'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || ''
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -44,7 +44,11 @@ export default function Home() {
         colors: ['#E8A0BF', '#F4A6C8', '#FFFFFF', '#FCE7EC']
       })
     } catch (err) {
-      setError(err.message)
+      if (err.message === 'Failed to fetch' || err.name === 'TypeError') {
+        setError('Không thể kết nối máy chủ. Vui lòng kiểm tra kết nối mạng hoặc thử lại sau.')
+      } else {
+        setError(err.message)
+      }
     } finally {
       setLoading(false)
     }

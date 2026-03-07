@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "buildyarn": "next build",
     "start": "next start"
   },
   "dependencies": {
@@ -16,7 +15,9 @@
     "react-dom": "^18.2.0",
     "next": "^14.0.4",
     "framer-motion": "^10.16.16",
-    "canvas-confetti": "^1.9.2"
+    "canvas-confetti": "^1.9.2",
+    "qrcode": "^1.5.3",
+    "better-sqlite3": "^11.0.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0",
